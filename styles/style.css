@@ -123,28 +123,48 @@
   gap: 10px;
 }
 
+.card__memory {
+  margin-block-end: 20px;
+  font-size: 18px;
+  line-height: 1.35;
+  font-variation-settings:
+    "wght" var(--main-font-weight);
+}
+
 .button {
+  position: relative;
+  overflow: hidden;
   min-block-size: 38px;
   padding: 9px 20px;
   border: 2px solid #000;
   background-color: #fff;
-  color: #000;
   font-family: var(--accent-font);
   font-size: 12px;
   line-height: 1;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: box-shadow 0.3s ease;
 }
 
-.button:hover {
+.button::before {
+  content: '';
+  position: absolute;
+  inset: 0;
   background-color: #000;
-  color: #fff;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.5s ease-in-out;
 }
 
-.button:focus-visible,
-.card__icon-button:focus-visible {
-  outline: 2px solid #000;
-  outline-offset: 2px;
+.button:hover::before {
+  transform: scaleX(1);
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button:focus-visible {
+  box-shadow: 2px 2px 0 #000;
 }
 
 .card__icon-button {
@@ -157,6 +177,22 @@
   border: 2px solid transparent;
   background-color: transparent;
   cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+
+.card__icon-button:focus {
+  outline: none;
+}
+
+.card__icon-button:focus-visible {
+  border-color: var(--accent-color);
+}
+
+.button__text {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  mix-blend-mode: difference;
 }
 
 .like-icon {
@@ -174,9 +210,7 @@
 }
 
 .dialog[open] {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 20px;
+  display: block;
 }
 
 .dialog::backdrop {
@@ -205,6 +239,51 @@
 .dialog__button {
   grid-column: 1 / -1;
   width: 100%;
+}
+
+.image-first {
+  filter: brightness(120%);
+}
+
+.image-study {
+  filter: sepia(0.8);
+}
+
+.image-thinking {
+  filter: grayscale(1);
+}
+
+.image-school {
+  filter: contrast(180%);
+}
+
+.image-team {
+  filter: saturate(180%);
+}
+
+.image-memory {
+  filter: blur(2px);
+}
+
+.image-deadline {
+  filter: hue-rotate(90deg);
+}
+
+.image-future {
+  filter: contrast(130%) brightness(110%) saturate(150%);
+}
+
+.save-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-inline: auto;
+}
+
+.save-button__icon {
+  width: 21px;
+  height: 21px;
 }
 
 @media (width <= 375px) {

@@ -23,4 +23,7 @@
   --content-width: clamp(375px, 100%, 1440px);
   --label-stroke-color: #fff;
   --label-opacity: 0.5;
+  --button-text-color: #fff;
+  --accent-color: #000;
+  --animation-fill-color: #ff0000;
 }
