@@ -20,7 +20,7 @@
       #e7e7e7 0.01%,
       #1a1a1a
     );
-  --content-width: clamp(375px, 100%, 1440px);
+  --content-width: clamp(375px, 100%, 700px);
   --label-stroke-color: #fff;
   --label-opacity: 0.5;
   --button-text-color: #fff;

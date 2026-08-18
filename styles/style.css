@@ -26,26 +26,31 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-block-size: 320px;
+  min-block-size: 368px;
   margin-block-end: 100px;
   padding: 20px;
   border: 2px solid #000;
   background-color: #fff;
   text-align: center;
+  margin-top: 100px;
 }
 
 .header__logo {
   margin-block-end: 20px;
   font-family: var(--accent-font);
-  font-size: 20px;
+  font-size: 65px;
   line-height: 1;
+  overflow-wrap: break-word;
+  max-width: 100%;
 }
 
 .header__title {
   font-family: var(--accent-font);
-  font-size: clamp(36px, 8vw, 70px);
+  font-size: 23px;
   line-height: 1;
   text-transform: uppercase;
+  overflow-wrap: break-word;
+  max-width: 100%;
 }
 
 .content-section {
@@ -54,13 +59,13 @@
 }
 
 .card {
-  margin-block-end: 100px;
+  margin-block-end: 52px;
   border: 2px solid #000;
   background-color: #fff;
 }
 
 .card__title {
-  padding: 20px;
+  padding: 4px 10px;
   font-size: 18px;
   line-height: 1.2;
   font-variation-settings:
@@ -106,13 +111,12 @@
 }
 
 .card__content {
-  padding: 20px;
+  padding: 25px;
 }
 
 .card__text {
   margin-block-end: 20px;
   font-size: 18px;
-  line-height: 1.35;
   font-variation-settings:
     "wght" var(--main-font-weight);
 }
@@ -121,13 +125,12 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  gap: 10px;
+  gap: 12px;
 }
 
 .card__memory {
-  margin-block-end: 20px;
+  margin-top: 25px;
   font-size: 18px;
-  line-height: 1.35;
   font-variation-settings:
     "wght" var(--main-font-weight);
 }
@@ -187,6 +190,14 @@
 
 .card__icon-button:focus-visible {
   border-color: var(--accent-color);
+}
+
+.card__like-button {
+  width: 118px;
+  height: 38px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .button__text {
@@ -285,6 +296,7 @@
   justify-content: center;
   gap: 8px;
   margin-inline: auto;
+  margin-bottom: 100px;
 }
 
 .save-button__icon {
@@ -297,6 +309,25 @@
 
 .save-button:hover .save-button__icon {
   color: #fff;
+}
+
+.card__icon-button:hover .like-icon .core {
+  fill: #000;
+  transition: fill 0.3s ease;
+}
+
+.card__icon-button:hover .like-icon .main-body {
+  fill: #000;
+  transition: fill 0.3s ease;
+}
+
+.is-liked .like-icon .core,
+.is-liked .like-icon .main-body {
+  fill: #000;
+}
+
+.is-liked .like-icon .contour {
+  fill: #000;
 }
 
 @media (width <= 375px) {
@@ -315,7 +346,7 @@
   }
 
   .header__title {
-    font-size: 36px;
+    font-size: 14px;
   }
 
   .card {
