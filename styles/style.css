@@ -225,9 +225,11 @@
   align-items: center;
 }
 
-.dialog__icon {
+.dialog-icon {
   width: 39px;
-  height: 39px;
+  height: 39px;  
+  z-index: 1;
+  position: relative;
   color: #000;
 }
 
@@ -288,14 +290,6 @@
 .save-button__icon {
   width: 28px;
   height: 28px;  
-  z-index: 1;
-  position: relative;
-  color: #000;
-}
-
-.save-button__dialog-icon {
-  width: 39px;
-  height: 39px;  
   z-index: 1;
   position: relative;
   color: #000;
