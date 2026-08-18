@@ -14,8 +14,7 @@
   min-inline-size: 320px;
   min-block-size: 100dvb;
   font-family: var(--main-font);
-  font-variation-settings:
-    "wght" var(--main-font-weight);
+  font-variation-settings: 'wght' var(--main-font-weight);
   background-image: var(--background-image);
   background-size: cover;
   background-attachment: fixed;
@@ -68,8 +67,7 @@
   padding: 4px 10px;
   font-size: 18px;
   line-height: 1.2;
-  font-variation-settings:
-    "wght" var(--title-font-weight);
+  font-variation-settings: 'wght' var(--title-font-weight);
 }
 
 .card__image-wrapper {
@@ -94,15 +92,12 @@
   mix-blend-mode: hard-light;
   text-shadow:
     1px 0 var(--label-stroke-color),
-   -1px 0 var(--label-stroke-color),
+    -1px 0 var(--label-stroke-color),
     0 1px var(--label-stroke-color),
     0 -1px var(--label-stroke-color);
 }
 
-@supports (
-  (-webkit-text-stroke: 1px var(--label-stroke-color)) or
-  (text-stroke: 1px var(--label-stroke-color))
-) {
+@supports ((-webkit-text-stroke: 1px var(--label-stroke-color)) or (text-stroke: 1px var(--label-stroke-color))) {
   .card__label {
     text-shadow: none;
     -webkit-text-stroke: 1px var(--label-stroke-color);
@@ -117,8 +112,7 @@
 .card__text {
   margin-block-end: 20px;
   font-size: 18px;
-  font-variation-settings:
-    "wght" var(--main-font-weight);
+  font-variation-settings: 'wght' var(--main-font-weight);
 }
 
 .card__buttons {
@@ -131,8 +125,7 @@
 .card__memory {
   margin-top: 25px;
   font-size: 18px;
-  font-variation-settings:
-    "wght" var(--main-font-weight);
+  font-variation-settings: 'wght' var(--main-font-weight);
 }
 
 .button {
@@ -238,7 +231,7 @@
 
 .dialog-icon {
   width: 39px;
-  height: 39px;  
+  height: 39px;
   z-index: 1;
   position: relative;
   color: #000;
@@ -301,7 +294,7 @@
 
 .save-button__icon {
   width: 28px;
-  height: 28px;  
+  height: 28px;
   z-index: 1;
   position: relative;
   color: #000;
