@@ -71,6 +71,16 @@
   animation: heart-scale 0.3s ease-in 0.1s 1;
 }
 
+.card__icon-button:hover .like-icon .core {
+  fill: #000;
+  transition: fill 0.3s ease;
+}
+
+.card__icon-button:hover .like-icon .main-body {
+  fill: #000;
+  transition: fill 0.3s ease;
+}
+
 @keyframes hears-scale {
   from {
     transform: scale(1);
