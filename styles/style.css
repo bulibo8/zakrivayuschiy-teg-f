@@ -338,13 +338,16 @@
   }
 
   .save-button {
-    width: 306px;
+    width: 100%;
+    max-width: 306px;
     height: 84px;
     display: flex; 
     flex-direction: column;
     align-items: center; 
     justify-content: center; 
+    margin-inline: auto;
     gap: 8px;
+    box-sizing: border-box;
   }
 
   .save-button__icon {
