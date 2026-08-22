@@ -157,10 +157,8 @@
 }
 
 .card__icon-button {
-  display: flex;
   align-items: center;
-  justify-content: center;
-  width: 39px;
+  width: 38px;
   height: 36px;
   padding: 0;
   border: 2px solid transparent;
@@ -305,13 +303,13 @@
 
 @media (width <= 375px) {
   .page {
-    padding-block: 50px;
+    padding-block: 100px;
   }
 
   .header {
     min-block-size: 327px;
     padding: 16px;
-    margin-block-end: 98px;
+    margin-block-end: 100px;
   }
 
   .header__title {
@@ -324,30 +322,33 @@
 
   .card__title {
     padding: 4px 10px;
-    font-size: 18px;
   }
 
   .card__content {
-    padding: 15px;
-  }
-
-  .card__text {
-    font-size: 18px;
-    margin: 25px
-  }
-
-  .card__label {
-    inset-block-start: 10px;
-    inset-inline-end: 10px;
-    font-size: 10px;
+    padding: 25px;
   }
 
   .card__buttons {
-    gap: 12px;
+    gap: 10px;
   }
 
   .button {
     padding: 8px 12px;
     font-size: 14px;
+  }
+
+  .save-button {
+    width: 306px;
+    height: 84px;
+    display: flex; 
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+    gap: 8px;
+  }
+
+  .save-button__icon {
+    width: 28px; 
+    height: 28px; 
   }
 }
